@@ -1,16 +1,18 @@
 package org.gsssoft.springrestful.dao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.gsssoft.springrestful.pojos.Student;
+import org.springframework.http.ResponseEntity;
 
 public interface StudentDao {
 	
-	Map<String,String> getAllStudents();
+	List<Student> getAllStudents();
 	Student getStudent(int id);
 	void addStudent(Student stud);
-	void updateStudent(Student stud);
-	void deleteStudent(int id);
+	ResponseEntity<Student> updateStudent(Student stud);
+	ResponseEntity<Integer> deleteStudent(int id);
 	
 	
 
