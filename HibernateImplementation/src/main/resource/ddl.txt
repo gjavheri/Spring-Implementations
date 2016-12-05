@@ -1,0 +1,7 @@
+create database hibernate_test;
+create table employee(id int,name varchar(20),designation varchar(20),primary key (id));
+
+create table contactnumber(id int,emp_id int, number varchar(10),FOREIGN KEY (emp_id) REFERENCES employee(id));
+
+
+
